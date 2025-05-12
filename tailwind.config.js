@@ -3,6 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        body: "Poppins, sans-serif",
+        sans: "Poppins, sans-serif",
+        heading: "Merriweather, serif",
+      },
       colors: {
         primary: {
           50: "#f1fcfa",

@@ -1,9 +1,14 @@
 import "@mantine/core/styles.css";
 
-import { Button, MantineProvider, createTheme } from "@mantine/core";
+import { MantineProvider, createTheme } from "@mantine/core";
+import AppRoutes from "./Routes/AppRoutes";
 
 const theme = createTheme({
   focusRing: "never",
+  fontFamily: "Poppins, sans-serif",
+  headings: {
+    fontFamily: "Merriweather, -serif",
+  },
   colors: {
     primary: [
       "#f1fcfa",
@@ -45,7 +50,7 @@ const theme = createTheme({
 export default function App() {
   return (
     <MantineProvider theme={theme}>
-      <Button variant="filled">Hello</Button>
+      <AppRoutes />
     </MantineProvider>
   );
 }
