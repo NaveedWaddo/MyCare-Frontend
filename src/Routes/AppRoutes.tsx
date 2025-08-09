@@ -1,14 +1,61 @@
-import Header from "../components/Header/Header";
-import Sidebar from "../components/Sidebar/Sidebar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AdminDashboard from "../Layout/AdminDashboard";
+import Random from "../components/Random";
 
 const AppRoutes = () => {
   return (
-    <div className="flex ">
-      <Sidebar />
-      <div className="w-full">
-        <Header />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/dashboard"
+          element={
+            <div>
+              <AdminDashboard />
+            </div>
+          }
+        />
+        <Route
+          path="/pharmacy"
+          element={
+            <div>
+              <AdminDashboard />
+            </div>
+          }
+        />
+        <Route
+          path="/patients"
+          element={
+            <div>
+              <AdminDashboard />
+            </div>
+          }
+        />
+        <Route
+          path="/doctor"
+          element={
+            <div>
+              <AdminDashboard />
+            </div>
+          }
+        />
+        <Route
+          path="/appointment"
+          element={
+            <div>
+              <AdminDashboard />
+            </div>
+          }
+        />
+        <Route
+          path="**"
+          element={
+            <div>
+              <Random />
+            </div>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
